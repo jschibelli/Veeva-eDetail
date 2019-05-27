@@ -1,0 +1,23 @@
+@import "../mixins";
+
+#GAL_1_1_SEVERE {
+
+
+	.container {
+		.content {
+			padding-left: 65px;
+			padding-right: 0;
+
+			.isi-disclaimer {
+				position: absolute;
+				bottom: 60px;
+			}
+		}
+		.severe-patient {
+			@include retinaImage("../../images/1-0-PHOTOSET/severe-patient-1-1.png", 1974, 802);
+			position: absolute;
+			bottom: 158px;
+			left: 20px;
+		}
+	}
+}

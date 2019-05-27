@@ -1,0 +1,64 @@
+@import "../mixins";
+#GAL_1_0_HOME {
+	// Colors
+	$dkBlue: #10155e;
+	.container {
+		.overlay-bg {
+			background: #fff;
+			height: 589px;
+			width: 1024px;
+		}
+		.content-area {
+			margin-top: 40px;
+			.images-container {
+				ul {
+					display: inline-flex;
+					li {
+						img {
+							margin-left: 30px;
+							width: 80%;
+							&.right-img {
+								left: 32px;
+								position: relative;
+							}
+						}
+					}
+				}
+			}
+		}
+		.lower-content {
+			color: $dkBlue;
+			font-family: "HelveticaNeueLTStd-Cn";
+			font-size: 17px;
+			padding-left: 28px;
+			padding-top: 35px;
+			ul {
+				list-style: disc;
+				li {
+					margin-left: 15px;
+					padding-bottom: 3px;
+					padding-top: 3px;
+				}
+			}
+		}
+		.lower-nav {
+			bottom: 40px;
+			position: absolute;
+			right: 30px;
+			ul {
+				li {
+					&.psychsocial-impact {
+						// display: none;
+					}
+					&.mean-change {
+						display: none;
+					}
+				}
+			}
+		}
+		.isi-disclaimer {
+			margin-left: 28px;
+			width: 80%;
+		}
+	}
+}

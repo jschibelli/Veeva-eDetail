@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{title}}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.tmp) assets/styles/main.css -->
+    <link rel="stylesheet" href="assets/styles/resets.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <!-- endbuild -->
+    {{#if cssname}}
+    <link rel="stylesheet" href="assets/styles/pages/{{title}}.css">
+    {{/if}}
+
+    <!-- PRELOAD -->
+    <div class="hidden">
+        <script type="text/javascript">
+            var images = new Array();
+
+            function preload() {
+                for (var i = 0; i < preload.arguments.length; i += 1) {
+                    images[i] = new Image();
+                    images[i].src = "assets/images/" + preload.arguments[i];
+                }
+            }
+
+            preload(
+                "bg_mainmenu.jpg",
+                "bg_texture.jpg",
+                "btn-close.png",
+                "btn-close2.png",
+                "btn-mainmenu-open.png",
+                "btn-mainmenu.png",
+                "menu_item_bg.png",
+                "header-bg.png",
+                "home-header-bg.png"
+                "ref-modal-bg.png",
+                "mirvaso-logo.png",
+                "moderate-patient-2-0.png",
+                "severe-patient-1-1.png"
+            );
+        </script>
+    </div>
+</head>
+
+<body id="{{title}}"{{#if nextPage}} data-nextpage="{{nextPage}}"{{/if}}{{#if prevPage}} data-prevpage="{{prevPage}}"{{/if}}>
+    <div class="container hwaccel">
+        <!-- Include a header from partials -->
+
+            {{>header}}
+        <div class="content hwaccel" data-content>
+            <div class="skin-bg">
+
+            </div>
+            <!-- The body of the page -->
+            <div class="foreground fade-on-load">
+                {{>body}}
+            </div>
+        </div>
+
+        {{#if refContent}}{{>GAL_0_2_REFERENCES}}{{/if}}
+        {{>GAL_0_3_SAFETY_INFO}}
+        {{>GAL_2_0_1_MEAN_CHANGE}}
+        {{>GAL_1_0_1_PSYCHOSOCIAL_IMPACT}}
+
+
+    </div>
+    <!-- Add scripts before body close -->
+    {{>scripts}}
+</body>
+
+</html>

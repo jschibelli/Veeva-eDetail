@@ -1,0 +1,244 @@
+// Fonts
+$helvetica-light: "HelveticaLTStd-Lt";
+$helvetica-cond: "HelveticaLTStd-Cn";
+$helvetical-condBold: "HelveticaLTStd-BdCn";
+$dinpro-regular: "DINPro-Regular";
+$dinpro-bold: "DINPro-Bold";
+
+// Colors
+$dkBlue: #10155e;
+
+
+.modal-index {
+    @include modal-area(0);
+}
+
+.modals-container {
+    @extend .modal-index;
+}
+
+.modal {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bg_texture.jpg");
+    background-size: contain;
+
+
+    .close-button {
+        @include closeButton();
+        top: 18px;
+    }
+
+    .title {
+        font-family: "DINPro-CondBold";
+        line-height: 1.2;
+        font-size: 24px;
+        margin-bottom: 11px;
+    }
+}
+
+.zoom-modal {
+    .zoom-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: table;
+        .image-container {
+            display: table-cell;
+            vertical-align: middle;
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.dss-modal-container {
+    opacity: 0;
+    z-index: 2000;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+}
+.references-modal {
+    //fonts
+    $regular: DINPro-Regular;
+    $bold: DINPro-Bold;
+
+    // Colors
+    $dkBlue: #10155e;
+
+    width: 1024px;
+    height: 768px;
+    background: url("../images/ref-modal-bg.png");
+    background-size: contain;
+    color: $dkBlue;
+    .logo {
+        @include retinaImage("../images/mirvaso-logo.png", 466, 65);
+        position: relative;
+        top: 18px;
+        left: 60px;
+
+    }
+
+    .reference-container {
+        position: absolute;
+        top: 120px;
+        left: 65px;
+        padding-right: 20px;
+        width: 435px;
+    }
+    h1 {
+        font-family: "HelveticaNeueLTStd-BdCn";
+        font-size: 12px;
+    }
+    .reference-texts {
+        font-family: "HelveticaNeueLTStd-Cn";
+
+        ol {
+            font-size: 12px;
+
+
+            li {
+                font-weight: normal;
+                padding-left: -21px;
+                 font-family: "HelveticaNeueLTStd-Cn";
+               span {
+                    font-family: "HelveticaNeueLTStd-BdCn";
+                }
+
+            }
+        }
+        em {
+            font-family: "HelveticaNeueLTStd-CnO";
+        }
+        sup {
+            position: relative;
+            font-size: 55%;
+            top: 0.1em;
+        }
+        .draft {
+            font-family: $regular;
+        }
+    }
+}
+
+.spc-modal {
+	width: 1024px;
+	height: 768px;
+	background-repeat: repeat;
+    color: #cecdce;
+
+    .tactupump_text {
+        display: none;
+    }
+
+    .spc-container {
+        width: 958px;
+        height: 700px;
+        position: relative;
+        top: 70px;
+        left: 65px;
+        overflow-y: scroll; /* has to be scroll, not auto */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-family: DINPro-bold;
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+	p {
+		span {
+			&.bold {
+				font-weight: bold;
+			}
+			&.underline {
+				text-decoration: underline;
+			}
+
+		}
+	}
+
+    .isi {
+        margin-right: 20px;
+        padding-bottom: 20px;
+
+        .isi-text {
+            font-family: DINPro-Light;
+            font-size: 19px;
+            color: #fff;
+            line-height: 1.15em;
+
+            p, li {
+                margin-bottom: 5px;
+
+                &.draft-heading {
+                    font-family: DINPro-Bold;
+                    text-decoration: underline;
+                    line-height: 1.4em;
+                    margin-bottom: 0;
+                }
+            }
+
+            strong {
+                font-family: DINPro-Bold;
+            }
+
+            ul {
+                list-style: disc;
+                margin-left: 21px;
+                font-size: 18px;
+
+            }
+        }
+
+        .isi-disclaimer {
+            font-family: DINPro-Light;
+            font-size: 12px;
+            margin-top: 10px;
+
+            .mlr-date {
+                padding-top: 5px;
+            }
+        }
+    }
+}
+
+.gal_1_0_1_psychosocial_impact {
+    background-repeat: repeat;
+    color: #cecdce;
+    height: 768px;
+    width: 1024px;
+    .container {
+        .content {
+            padding-left: 65px;
+            padding-right: 0;
+        }
+    }
+}
+.mean-change-2-0-1  {
+    background-repeat: repeat;
+    color: #cecdce;
+    height: 768px;
+    width: 1024px;
+    .container {
+        .content {
+            padding-left: 65px;
+            padding-right: 0;
+        }
+    }
+}

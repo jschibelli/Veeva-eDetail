@@ -1,0 +1,178 @@
+@import "typography";
+
+@mixin nav-area($stack) {
+    z-index: 400 + $stack;
+}
+
+@mixin modal-area($stack) {
+    z-index: 500 + $stack;
+}
+
+@mixin foreground-area($stack) {
+    z-index: 200 + $stack;
+}
+
+/**
+ * Sets background image of node to retina value
+ * $param image string path to image (root: images/ directory)
+ * $param width int original width of image
+ * $param height int original height of image
+ */
+@mixin retinaImage($image, $width, $height) {
+    $retinaWidth: #{($width / 2)}px;
+    $retinaHeight: #{($height / 2)}px;
+    
+    width: $retinaWidth;
+    height: $retinaHeight;
+    background: url($image) no-repeat;
+    background-size: $retinaWidth $retinaHeight;
+}
+
+@mixin normalImage($image, $width, $height) {
+    $retinaWidth: #{($width)}px;
+    $retinaHeight: #{($height)}px;
+    
+    width: $retinaWidth;
+    height: $retinaHeight;
+    background: url($image) no-repeat;
+    background-size: $retinaWidth $retinaHeight;
+}
+
+@mixin normalImage($image, $width, $height) {
+    $retinaWidth: #{($width)}px;
+    $retinaHeight: #{($height)}px;
+    
+    width: $retinaWidth;
+    height: $retinaHeight;
+    background: url($image) no-repeat;
+    background-size: $retinaWidth $retinaHeight;
+}
+
+@mixin closeButton() {
+    @include retinaImage("../images/btn-close.png", 76, 75);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    z-index: 1;
+}
+
+.fade-animation {
+    opacity: 0;
+    transition: 1s ease;
+    
+    &.show {
+        opacity: 1;
+    }
+}
+
+/* LIGHT UP STYLES */
+
+.light-up-text {
+    color: #586188;
+    transition: 1s;
+    transition-delay: 0.25s;
+
+    &.light-on {
+        text-shadow: 0 0 .25em #FF5B35, 0 0 .25em #FF5B35, 0 0 .25em #FF5B35;
+        color: #FFF;
+    }
+}
+
+.light-up-btn {
+    color: #fff;
+    text-transform: uppercase;
+    display: table;
+    border: 4px solid #515e84;
+    background: -webkit-gradient(radial, 0 0, 0, 0 0, 50, from(rgba(255, 255, 255, 0.25)), to(transparent)) rgba(107, 114, 148, 0.5);
+    transition: 1s;
+    transition-delay: 0.25s;
+
+    span {
+        @extend .DINProCondBold;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.1em;
+    }
+    
+    &.light-on {
+        border: 4px solid rgba(200, 200, 255, 0.75);
+        box-shadow: 0 0 0 1px #000, 0 0 0 1px #000 inset, 0 0 3px 3px rgba(107, 114, 148, 0.5), 0 0 7px 4px rgba(107, 114, 148, 0.25), 0 0 28px 5px rgba(107, 114, 148, 0.5) inset;
+    }
+}
+
+/* TOGGLE STYLES */
+
+.toggle-content {
+    position: absolute;
+    display: none;
+    
+    &.active {
+        display: block;
+    }
+}
+
+/* ANIMATING CHART STYLES */
+
+.chart-container {
+    position: relative;
+
+    .chart_line {
+        position: absolute;
+        transition: 1s;
+
+        &:after {
+            content: "";
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.05);
+            position: absolute;
+            border: 1px solid rgba(255, 255, 255, 0.27);
+            border-radius: 45px;
+            transform: scale(0);
+            transition: 0.5s;
+        }
+
+        &.scale_highlight {
+
+            &:after {
+                transform: scale(1);
+            }
+        }
+
+        .success_rate {
+            position: absolute;
+            font-family: "Neon80s";
+            opacity: 0;
+            transform: scale(0.6);
+            transition: 1s;
+            -webkit-transform-origin: left bottom;
+        }
+    }
+
+    .vehicle_line {
+        @extend .chart_line;
+
+        .success_rate {
+            color: #b4bbca;
+        }
+    }
+
+    .forte_line {
+        @extend .chart_line;
+
+        &.light_up {
+
+            .success_rate {
+                @extend .light-up-text.light-on;
+            }
+        }
+
+        .success_rate {
+            color: #ff5a34;
+        }
+    }
+}

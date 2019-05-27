@@ -1,0 +1,86 @@
+header {
+    @include nav-area(0);
+    width: 1024px;
+    height: 110px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+
+    -webkit-transform: translateY(-200px);
+}
+
+.menu-utility-row {
+    position: absolute;
+    bottom: 85px;
+    right: 25px;
+}
+
+nav.utility_nav {
+    @include nav-area(5);
+
+    li {
+        width: 92px;
+        height: 92px;
+        background-image: url("../images/1-0-HOME/psychosocial-btn.png");
+        background-size: cover;
+        font-size: 9px;
+        text-transform: uppercase;
+        float: left;
+        margin: 0 20px 0 0;
+        display: table;
+
+        &.active {
+            border: 4px solid #fff;
+            text-shadow: 0 0 .25em #FF5B35,0 0 .25em #FF5B35,0 0 .25em #FF5B35;
+            box-shadow: 0 0 0 1px #ff5b35,0 0 0 1px #ff5b35 inset,0 0 3px 3px rgba(255,91,53,.5),0 0 7px 4px rgba(255,91,53,.25),0 0 28px 5px rgba(255,91,53,.5) inset;
+        }
+
+        span {
+            display: table-cell;
+            vertical-align: middle;
+            text-align:center;
+            font-family: "DINPro-Bold";
+            font-weight: bold;
+            opacity: 0.5;
+        }
+    }
+}
+nav.upper-utility_nav {
+    @include nav-area(5);
+    position: absolute;
+    text-outline: 5px;
+    right: 30px;
+
+    li {
+        img {
+            &.refModal {
+                width: 75%;
+                position: relative;
+                top: 5px;
+                left: 5px
+            }
+        }
+        height: 43px;
+
+        font-size: 12px;
+        text-transform: uppercase;
+        float: left;
+        margin: 0 20px 0 0;
+        display: table;
+        background-color: #929396;
+
+        margin-right: 15px;
+        padding: 0 10px;
+        font-family: "HelveticaNeueLTStd-BdCn";
+        font-size: 10px;
+        color: #fff;
+
+
+        span {
+            display: table-cell;
+            vertical-align: middle;
+            text-align:center;
+            font-weight: bold;
+        }
+    }
+}

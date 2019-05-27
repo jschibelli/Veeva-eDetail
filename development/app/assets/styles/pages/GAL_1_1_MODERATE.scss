@@ -1,0 +1,21 @@
+@import "../mixins";
+
+#GAL_1_1_MODERATE {
+	.container {
+		.content {
+			padding-left: 65px;
+			padding-right: 0;
+
+			.isi-disclaimer {
+				position: absolute;
+				bottom: 60px;
+			}
+		}
+		.moderate-patient {
+			@include retinaImage("../../images/2-0-EFFICACY/moderate-patient-2-0.png", 1974, 802);
+			position: absolute;
+			bottom: 158px;
+			left: 20px;
+		}
+	}
+}

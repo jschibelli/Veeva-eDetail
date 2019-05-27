@@ -1,0 +1,136 @@
+#menu {
+    @include nav-area(4);
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 230px;
+
+    #menuToggle {
+        height: 44px;
+        width: 44px;
+        @include retinaImage("../images/btn-mainmenu.png", 60, 60);
+        background-size: 30 44px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 20px;
+        left: 10px;
+
+        &.active {
+            background-image: url("../images/btn-mainmenu-open.png");
+        }
+    }
+
+    #menuLogo {
+        @include retinaImage("../images/mirvaso-logo.png", 466, 65);
+        position: absolute;
+        top: 20px;
+        left: 60px;
+    }
+
+    .tactupump_menu {
+        display: none;
+    }
+}
+
+#menuOverlay {
+    opacity: 0;
+    display: none;
+}
+
+#menuSlide {
+    @include nav-area(3);
+    width: 1024px;
+    height: 768px;
+    background-image: url("../images/bg_mainmenu.jpg");
+    background-repeat: repeat;
+    position: absolute;
+    top: 0px;
+    left: -500px;
+}
+
+#menuFade {
+    @include nav-area(2);
+    width: 1024px;
+    height: 768px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #000;
+    opacity: 0.3;
+}
+
+nav.menu_nav {
+    position: absolute;
+    top: 142px;
+    left: 53px;
+    li {
+        width: 285px;
+        height: 110px;
+        border: 4px solid rgba(200, 200, 255, 0.75);
+        background-image: url("../images/menu_item_bg.png");
+        background-size: cover;
+        box-shadow: 0 0 0 1px #000, 0 0 0 1px #000 inset, 0 0 3px 3px rgba(107, 114, 148, 0.5), 0 0 7px 4px rgba(107, 114, 148, 0.25), 0 0 28px 5px rgba(107, 114, 148, 0.5) inset;
+        color: #000;
+        font-size: 24px;
+        font-weight: bold;
+        float: left;
+        margin: 0 35px 35px 0;
+        display: table;
+        font-family: "Trade Gothic LT STD";
+        font-weight: bold;
+        font-size: 17px;
+        color: #313032;
+
+        &.menu-item9 {
+            position: relative;
+            left: 103px;
+        }
+        span {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            width: 300px;
+            height: 155px;
+            font-family: DINPro-Bold;
+            font-size: 24px;
+            color: #fff;
+        }
+        &.active {
+            color: #fff;
+        }
+        &.active.main-active {
+            border: 4px solid #fff;
+            text-shadow: 0 0 .25em #FF5B35,0 0 .25em #FF5B35,0 0 .25em #FF5B35;
+            box-shadow: 0 0 0 1px #ff5b35,0 0 0 1px #ff5b35 inset,0 0 3px 3px rgba(255,91,53,.5),0 0 7px 4px rgba(255,91,53,.25),0 0 28px 5px rgba(255,91,53,.5) inset;
+        }
+        &.active.moa-flow-active {
+            border: 4px solid #fff;
+            text-shadow: 0 0 .25em #FF5B35,0 0 .25em #FF5B35,0 0 .25em #FF5B35;
+            box-shadow: 0 0 0 1px #ff5b35,0 0 0 1px #ff5b35 inset,0 0 3px 3px rgba(255,91,53,.5),0 0 7px 4px rgba(255,91,53,.25),0 0 28px 5px rgba(255,91,53,.5) inset;
+        }
+        &.active.finacea-flow-active {
+            background: #86d3a7;
+        }
+
+    }
+    .shadow {
+        border: 4px solid rgba(200,200,255,.75);
+        box-shadow: 0 0 0 1px #000,0 0 0 1px #000 inset,0 0 3px 3px rgba(107,114,148,.5),0 0 7px 4px rgba(107,114,148,.25),0 0 28px 5px rgba(107,114,148,.5) inset;
+    }
+}
+
+#tactuPumpLogo {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+
+    .tactupump-image {
+        @include retinaImage("../images/tactupump_logo.png", 333, 250);
+    }
+
+    .tactupump-text {
+        font-family: "DINPro-Light";
+        font-size: 12px;
+        margin-left: 16px;
+    }
+}

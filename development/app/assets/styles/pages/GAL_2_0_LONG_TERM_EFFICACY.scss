@@ -1,0 +1,80 @@
+@import "../mixins";
+
+#GAL_2_0_LONG_TERM_EFFICACY {
+	// Colors
+    $dkBlue: #10155e;
+	.container {
+		.long-term-chart {
+			@include retinaImage("../../images/2-0-EFFICACY/2-0-long-term-chart.png", 1860, 736);
+			position: absolute;
+			bottom: 135px;
+			margin-left: 53px;
+		}
+
+		.content-area {
+			padding-top: 30px;
+
+			ul {
+				list-style: none;
+				display: table;
+				font-family: "HelveticaNeueLTStd-BdCn";
+				font-size: 20px;
+				color: $dkBlue;
+				width: 100%;
+
+				text-align: center;
+				li {
+					display: table-cell;
+					padding-right: 30px;
+					position: relative;
+					right: 28px;
+
+					&.last {
+						padding-right: 0px;
+						position: relative;
+						left: 10px;
+					}
+				}
+			}
+
+
+			.isi-disclaimer {
+				position: absolute;
+				bottom: 0px;
+			}
+		}
+			.lower-content {
+			color: $dkBlue;
+			font-family: "HelveticaNeueLTStd-Cn";
+			font-size: 15px;
+			padding-left: 28px;
+			padding-top: 35px;
+			position: absolute;
+			bottom: 20px;
+			width: 75%;
+			ul {
+				list-style: disc;
+				li {
+					margin-left: 15px;
+					padding-bottom: 3px;
+					padding-top: 3px;
+				}
+			}
+		}
+		.lower-nav {
+			bottom: 40px;
+			position: absolute;
+			right: 30px;
+			ul {
+				li {
+					&.psychsocial-impact {
+						// display: none;
+					}
+					&.mean-change {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

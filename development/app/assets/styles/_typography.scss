@@ -1,0 +1,91 @@
+/* TYPOGRAPHY */
+
+sup {
+    font-size: 60%;
+    position: relative;
+    line-height: 0;
+}
+
+.tm {
+    
+}
+
+.ast {
+    
+}
+
+.symbol {
+    font-family: "UniversLTStd";
+}
+    
+.hang {
+    text-indent: -4px;
+}
+
+.no-break {
+    white-space: nowrap;
+}
+
+.DINProRegular {
+    font-family: "DINPro-Regular";
+    
+    strong, .bold {
+        font-family: "DINPro-Bold";
+    }
+    
+    sup, .tm, .ast {
+        font-family: "DINPro-Light";
+    }
+}
+
+.DINProMedium {
+    font-family: "DINPro-Medium";
+    
+    strong, .bold {
+        font-family: "DINPro-Bold";
+    }
+    
+    sup, .tm, .ast {
+        font-family: "DINPro-Light";
+    }
+}
+
+.DINProMedium {
+    font-family: "DINPro-Bold";
+    
+    sup, .tm, .ast {
+        font-family: "DINPro-Light";
+    }
+}
+
+.DINProCondRegular {
+    font-family: "DINPro-CondRegular";
+    
+    strong, .bold {
+        font-family: "DINPro-CondBold";
+    }
+    
+    sup, .tm, .ast {
+        font-family: "DINPro-CondLight";
+    }
+}
+
+.DINProCondMedium {
+    font-family: "DINPro-CondMedium";
+    
+    strong, .bold {
+        font-family: "DINPro-CondBold";
+    }
+    
+    sup, .tm, .ast {
+        font-family: "DINPro-CondLight";
+    }
+}
+
+.DINProCondBold {
+    font-family: "DINPro-CondBold";
+    
+    sup, .tm, .ast {
+        font-family: "DINPro-CondLight";
+    }
+}

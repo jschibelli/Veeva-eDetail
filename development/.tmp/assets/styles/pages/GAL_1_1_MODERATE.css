@@ -1,0 +1,193 @@
+/* TYPOGRAPHY */
+sup {
+  font-size: 60%;
+  position: relative;
+  line-height: 0;
+}
+
+.symbol {
+  font-family: "UniversLTStd";
+}
+
+.hang {
+  text-indent: -4px;
+}
+
+.no-break {
+  white-space: nowrap;
+}
+
+.DINProRegular {
+  font-family: "DINPro-Regular";
+}
+.DINProRegular strong, .DINProRegular .bold {
+  font-family: "DINPro-Bold";
+}
+.DINProRegular sup, .DINProRegular .tm, .DINProRegular .ast {
+  font-family: "DINPro-Light";
+}
+
+.DINProMedium {
+  font-family: "DINPro-Medium";
+}
+.DINProMedium strong, .DINProMedium .bold {
+  font-family: "DINPro-Bold";
+}
+.DINProMedium sup, .DINProMedium .tm, .DINProMedium .ast {
+  font-family: "DINPro-Light";
+}
+
+.DINProMedium {
+  font-family: "DINPro-Bold";
+}
+.DINProMedium sup, .DINProMedium .tm, .DINProMedium .ast {
+  font-family: "DINPro-Light";
+}
+
+.DINProCondRegular {
+  font-family: "DINPro-CondRegular";
+}
+.DINProCondRegular strong, .DINProCondRegular .bold {
+  font-family: "DINPro-CondBold";
+}
+.DINProCondRegular sup, .DINProCondRegular .tm, .DINProCondRegular .ast {
+  font-family: "DINPro-CondLight";
+}
+
+.DINProCondMedium {
+  font-family: "DINPro-CondMedium";
+}
+.DINProCondMedium strong, .DINProCondMedium .bold {
+  font-family: "DINPro-CondBold";
+}
+.DINProCondMedium sup, .DINProCondMedium .tm, .DINProCondMedium .ast {
+  font-family: "DINPro-CondLight";
+}
+
+.DINProCondBold, .light-up-btn span {
+  font-family: "DINPro-CondBold";
+}
+.DINProCondBold sup, .light-up-btn span sup, .DINProCondBold .tm, .light-up-btn span .tm, .DINProCondBold .ast, .light-up-btn span .ast {
+  font-family: "DINPro-CondLight";
+}
+
+/**
+ * Sets background image of node to retina value
+ * $param image string path to image (root: images/ directory)
+ * $param width int original width of image
+ * $param height int original height of image
+ */
+.fade-animation {
+  opacity: 0;
+  -webkit-transition: 1s ease;
+          transition: 1s ease;
+}
+.fade-animation.show {
+  opacity: 1;
+}
+
+/* LIGHT UP STYLES */
+.light-up-text {
+  color: #586188;
+  -webkit-transition: 1s;
+          transition: 1s;
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+.light-up-text.light-on, .chart-container .forte_line.light_up .success_rate {
+  text-shadow: 0 0 .25em #FF5B35, 0 0 .25em #FF5B35, 0 0 .25em #FF5B35;
+  color: #FFF;
+}
+
+.light-up-btn {
+  color: #fff;
+  text-transform: uppercase;
+  display: table;
+  border: 4px solid #515e84;
+  background: -webkit-gradient(radial, 0 0, 0, 0 0, 50, from(rgba(255, 255, 255, 0.25)), to(transparent)) rgba(107, 114, 148, 0.5);
+  -webkit-transition: 1s;
+          transition: 1s;
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+.light-up-btn span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.1em;
+}
+.light-up-btn.light-on {
+  border: 4px solid rgba(200, 200, 255, 0.75);
+  box-shadow: 0 0 0 1px #000, 0 0 0 1px #000 inset, 0 0 3px 3px rgba(107, 114, 148, 0.5), 0 0 7px 4px rgba(107, 114, 148, 0.25), 0 0 28px 5px rgba(107, 114, 148, 0.5) inset;
+}
+
+/* TOGGLE STYLES */
+.toggle-content {
+  position: absolute;
+  display: none;
+}
+.toggle-content.active {
+  display: block;
+}
+
+/* ANIMATING CHART STYLES */
+.chart-container {
+  position: relative;
+}
+.chart-container .chart_line, .chart-container .vehicle_line, .chart-container .forte_line {
+  position: absolute;
+  -webkit-transition: 1s;
+          transition: 1s;
+}
+.chart-container .chart_line:after, .chart-container .vehicle_line:after, .chart-container .forte_line:after {
+  content: "";
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.27);
+  border-radius: 45px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.5s;
+          transition: 0.5s;
+}
+.chart-container .chart_line.scale_highlight:after, .chart-container .scale_highlight.vehicle_line:after, .chart-container .scale_highlight.forte_line:after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.chart-container .chart_line .success_rate, .chart-container .vehicle_line .success_rate, .chart-container .forte_line .success_rate {
+  position: absolute;
+  font-family: "Neon80s";
+  opacity: 0;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  -webkit-transition: 1s;
+          transition: 1s;
+  -webkit-transform-origin: left bottom;
+}
+.chart-container .vehicle_line .success_rate {
+  color: #b4bbca;
+}
+.chart-container .forte_line .success_rate {
+  color: #ff5a34;
+}
+
+#GAL_1_1_MODERATE .container .content {
+  padding-left: 65px;
+  padding-right: 0;
+}
+#GAL_1_1_MODERATE .container .content .isi-disclaimer {
+  position: absolute;
+  bottom: 60px;
+}
+#GAL_1_1_MODERATE .container .moderate-patient {
+  width: 987px;
+  height: 401px;
+  background: url("../../images/2-0-EFFICACY/moderate-patient-2-0.png") no-repeat;
+  background-size: 987px 401px;
+  position: absolute;
+  bottom: 158px;
+  left: 20px;
+}
